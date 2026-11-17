@@ -1,0 +1,38 @@
+AIR UNIVERSITY - DATA SCIENCE LAB 09
+Name: Shafqaat Ahmad
+Registration No: 230450
+Semester: BSCS 7th
+Course: CS-402L Data Science Lab
+Lab Instructor: Mustajab Hussain
+
+TASK 1 - HOUSING PRICES NEAR TRANSIT
+Slope: -0.7262 price units per 100 metres
+Intercept: 45.8514
+Predicted price at 500 metres: 42.22 price units
+Explanation: The negative slope means that predicted house price per unit area decreases by about 0.73 price units for every additional 100 metres from the nearest MRT station. This is an average linear relationship.
+
+TASK 2 - YACHT RESISTANCE
+Linear fold RMSE: [8.16, 10.57, 9.84, 8.38, 7.78]
+Linear mean CV RMSE: 8.95
+Quadratic fold RMSE: [3.93, 4.59, 4.45, 4.49, 3.50]
+Quadratic mean CV RMSE: 4.19
+Conclusion: Quadratic Polynomial Regression is better because it has the lower mean validation RMSE.
+
+TASK 3 - CONCRETE STRENGTH
+Rows after duplicate removal: 1005
+Training rows: 804
+Test rows: 201
+Linear baseline mean CV RMSE: 10.20 MPa
+Best parameters: degree=3, alpha=0.1
+Best mean CV RMSE: 6.09 MPa
+Top three settings:
+1. Degree 3, alpha 0.1, mean CV RMSE 6.09 MPa
+2. Degree 3, alpha 0.01, mean CV RMSE 6.16 MPa
+3. Degree 3, alpha 1, mean CV RMSE 6.27 MPa
+Test RMSE: 6.52 MPa
+Test MAE: 4.67 MPa
+
+Explanation: The tuned model has lower mean CV RMSE than the linear baseline. A degree-2 interaction example is Cement × Age. Scaling is inside the pipeline so each training fold learns its own scaling values, preventing validation data leakage and making Ridge regularization fair across differently scaled features.
+
+NOTE
+Small differences may occur with different package versions. The fixed random_state and folds from the lab manual are used.
